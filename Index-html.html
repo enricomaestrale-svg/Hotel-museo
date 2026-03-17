@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 25.8.5.2 (Windows)"/>
+	<meta name="created" content="2026-03-17T15:35:10.524423900"/>
+	<meta name="changed" content="2026-03-17T15:36:40.431516300"/>
+	<style type="text/css">
+		@page { size: 21cm 29.7cm; margin: 2cm }
+		p { line-height: 115%; margin-bottom: 0.25cm; background: transparent }
+	</style>
+</head>
+<body lang="it-IT" link="#000080" vlink="#800000" dir="ltr"><p style="margin-bottom: 0cm; line-height: 100%">
+&lt;!DOCTYPE html&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">&lt;html lang=&quot;it&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">&lt;head&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">    &lt;meta
+charset=&quot;UTF-8&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">    &lt;meta
+name=&quot;viewport&quot; content=&quot;width=device-width,
+initial-scale=1.0&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">    &lt;title&gt;Art
+Hotel Museo - Centro Congressi Prato&lt;/title&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">    &lt;script
+src=&quot;https://cdn.tailwindcss.com&quot;&gt;&lt;/script&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">    &lt;link
+rel=&quot;stylesheet&quot;
+href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">    &lt;style&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        @import
+url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap');</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        :root {</p>
+<p style="margin-bottom: 0cm; line-height: 100%">           
+--hotel-blue: #1a2e44;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">           
+--hotel-gold: #c5a059;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">           
+--hotel-beige: #f5f1ea; 
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">           
+--hotel-gray-light: #f1f3f5; 
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        }</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        body {
+font-family: 'Montserrat', sans-serif; background-color: #fff; color:
+#333; scroll-behavior: smooth; }</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        .font-serif
+{ font-family: 'Playfair Display', serif; }</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        .room-card {
+transition: all 0.3s ease; border-left: 4px solid transparent;
+background-color: #fff; }</p>
+<p style="margin-bottom: 0cm; line-height: 100%">       
+.room-card:hover { transform: translateX(5px); border-left-color:
+var(--hotel-gold); }</p>
+<p style="margin-bottom: 0cm; line-height: 100%">       
+.room-card.active { border-left-color: var(--hotel-gold); }</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">       
+.details-panel { 
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">           
+max-height: 0; 
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">           
+overflow: hidden; 
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">           
+transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        }</p>
+<p style="margin-bottom: 0cm; line-height: 100%">       
+.room-card.active + .details-panel { max-height: 1000px;
+padding-bottom: 2rem; }</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        .tab-btn {
+transition: all 0.2s; border: 1px solid var(--hotel-blue); color:
+var(--hotel-blue); }</p>
+<p style="margin-bottom: 0cm; line-height: 100%">       
+.tab-btn.active { background-color: var(--hotel-blue); color: white;
+}</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        .menu-card {</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            display:
+flex;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">           
+flex-direction: column;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            height:
+100%;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">           
+transition: transform 0.2s;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">           
+background-color: #fff;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        }</p>
+<p style="margin-bottom: 0cm; line-height: 100%">       
+.menu-card:hover { transform: translateY(-5px); box-shadow: 0 10px
+25px rgba(0,0,0,0.05); }</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">       
+.hero-gradient {</p>
+<p style="margin-bottom: 0cm; line-height: 100%">           
+background: linear-gradient(to bottom, rgba(26, 46, 68, 0.6),
+rgba(26, 46, 68, 0.2));</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        }</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">       
+.map-container {</p>
+<p style="margin-bottom: 0cm; line-height: 100%">           
+background: radial-gradient(circle at center, #ffffff 0%, #e9ecef
+100%);</p>
+<p style="margin-bottom: 0cm; line-height: 100%">           
+position: relative;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">           
+overflow: hidden;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        }</p>
+<p style="margin-bottom: 0cm; line-height: 100%">       
+.distance-line {</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            stroke:
+var(--hotel-gold);</p>
+<p style="margin-bottom: 0cm; line-height: 100%">           
+stroke-width: 2;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">           
+stroke-dasharray: 5;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            opacity:
+0.6;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        }</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">       
+.section-beige { background-color: var(--hotel-beige); }</p>
+<p style="margin-bottom: 0cm; line-height: 100%">       
+.section-gray { background-color: var(--hotel-gray-light); }</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">       
+.salvatores-special {</p>
+<p style="margin-bottom: 0cm; line-height: 100%">           
+grid-column: span 1;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        }</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        @media
+(min-width: 1024px) {</p>
+<p style="margin-bottom: 0cm; line-height: 100%">           
+.salvatores-special {</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+grid-column: span 2;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            }</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        }</p>
+<p style="margin-bottom: 0cm; line-height: 100%">    &lt;/style&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">&lt;/head&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">&lt;body&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">    &lt;!-- Header /
+Hero --&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">    &lt;header
+class=&quot;relative h-[65vh] flex items-center justify-center
+text-white overflow-hidden&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        &lt;div
+class=&quot;absolute inset-0 hero-gradient z-10&quot;&gt;&lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        &lt;img
+src=&quot;https://www.arthotel-museo.it/wp-content/uploads/sites/3/2023/03/art-hotel-museo-prato-meeting-1024x682.jpg&quot;
+alt=&quot;Sala Meeting Art Hotel Museo&quot; class=&quot;absolute
+inset-0 w-full h-full object-cover&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        &lt;div
+class=&quot;relative z-20 text-center px-4 max-w-4xl&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            &lt;h1
+class=&quot;text-5xl md:text-7xl font-serif font-bold mb-4
+italic&quot;&gt;Art Hotel Museo&lt;/h1&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            &lt;p
+class=&quot;text-xl md:text-2xl font-light mb-8 uppercase
+tracking-[0.3em] text-hotel-gold&quot;&gt;Centro Congressi Prato&lt;/p&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            &lt;div
+class=&quot;flex flex-wrap justify-center gap-4&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                &lt;a
+href=&quot;#sale&quot; class=&quot;bg-hotel-gold text-white px-8 py-3
+rounded-full font-semibold hover:bg-opacity-90 transition
+shadow-lg&quot;&gt;Le Sale Meeting&lt;/a&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                &lt;a
+href=&quot;#ristorazione&quot; class=&quot;bg-white text-black px-8
+py-3 rounded-full font-semibold hover:bg-gray-100 transition
+shadow-lg&quot;&gt;Ristorazione&lt;/a&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            &lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        &lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">    &lt;/header&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">    &lt;!-- Welcome
+Section (BEIGE) --&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">    &lt;section
+class=&quot;py-20 section-beige border-b border-black/5&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        &lt;div
+class=&quot;max-w-4xl mx-auto px-6 text-center&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            &lt;h2
+class=&quot;text-3xl md:text-4xl font-serif font-bold text-hotel-blue
+mb-6 italic&quot;&gt;La Cornice Ideale per i Vostri Eventi&lt;/h2&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            &lt;p
+class=&quot;text-gray-700 leading-relaxed italic text-lg&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+Struttura 4 stelle dove il design contemporaneo incontra l'efficienza
+funzionale. 
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+Situato di fronte al Centro Pecci, l'Art Hotel Museo dispone di 8
+sale meeting modulabili, 106 camere e un prestigioso ristorante
+interno.</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            &lt;/p&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        &lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">    &lt;/section&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">    &lt;!-- SALE
+MEETING (GRIGIO CHIARO) --&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">    &lt;section
+id=&quot;sale&quot; class=&quot;py-20 section-gray&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        &lt;div
+class=&quot;max-w-6xl mx-auto px-6&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            &lt;div
+class=&quot;text-center mb-16&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+&lt;span class=&quot;text-hotel-gold font-bold tracking-widest
+uppercase text-sm&quot;&gt;Professionalità &amp; Spazio&lt;/span&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                &lt;h2
+class=&quot;text-4xl font-serif font-bold text-hotel-blue mt-2&quot;&gt;Le
+Sale Congressi&lt;/h2&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                &lt;p
+class=&quot;text-gray-500 mt-4 italic&quot;&gt;Clicca sul nome della
+sala per scoprire dettagli, capacità e allestimenti.&lt;/p&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            &lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            &lt;div
+id=&quot;rooms-list&quot; class=&quot;space-y-4&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                &lt;!--
+Injected by JavaScript --&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            &lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        &lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">    &lt;/section&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">    &lt;!--
+RISTORAZIONE (BEIGE) --&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">    &lt;section
+id=&quot;ristorazione&quot; class=&quot;py-20 section-beige&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        &lt;div
+class=&quot;max-w-7xl mx-auto px-6&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            &lt;div
+class=&quot;text-center mb-12&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+&lt;span class=&quot;text-hotel-gold font-bold tracking-widest
+uppercase text-sm&quot;&gt;Operà Arte &amp; Restaurant&lt;/span&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                &lt;h2
+class=&quot;text-4xl font-serif font-bold text-hotel-blue mt-2
+mb-8&quot;&gt;Proposte Gastronomiche&lt;/h2&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                &lt;div
+class=&quot;flex flex-wrap justify-center gap-3 mb-12&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+&lt;button onclick=&quot;filterMenu('coffee')&quot; id=&quot;btn-coffee&quot;
+class=&quot;tab-btn active px-6 py-2 rounded-full text-sm
+font-semibold&quot;&gt;Coffee Break&lt;/button&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+&lt;button onclick=&quot;filterMenu('buffet')&quot; id=&quot;btn-buffet&quot;
+class=&quot;tab-btn px-6 py-2 rounded-full text-sm
+font-semibold&quot;&gt;Business Buffet&lt;/button&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+&lt;button onclick=&quot;filterMenu('servite')&quot; id=&quot;btn-servite&quot;
+class=&quot;tab-btn px-6 py-2 rounded-full text-sm
+font-semibold&quot;&gt;Pranzi Serviti&lt;/button&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+&lt;button onclick=&quot;filterMenu('apericene')&quot;
+id=&quot;btn-apericene&quot; class=&quot;tab-btn px-6 py-2
+rounded-full text-sm font-semibold&quot;&gt;Apericene&lt;/button&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+&lt;button onclick=&quot;filterMenu('welcome')&quot; id=&quot;btn-welcome&quot;
+class=&quot;tab-btn px-6 py-2 rounded-full text-sm
+font-semibold&quot;&gt;Welcome Drink&lt;/button&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+&lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            &lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            &lt;div
+id=&quot;menu-container&quot; class=&quot;grid grid-cols-1
+md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 min-h-[400px]&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                &lt;!--
+Contenuto generato da JS --&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            &lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        &lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">    &lt;/section&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">    &lt;!--
+POSIZIONE &amp; CARTINA (GRIGIO) --&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">    &lt;section
+class=&quot;py-20 section-gray border-t border-black/5&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        &lt;div
+class=&quot;max-w-7xl mx-auto px-6&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            &lt;div
+class=&quot;grid lg:grid-cols-12 gap-12 items-stretch&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                &lt;div
+class=&quot;lg:col-span-4 space-y-8&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+&lt;div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   &lt;h2 class=&quot;text-4xl font-serif font-bold italic mb-4
+text-hotel-blue&quot;&gt;📍 Posizione Strategica&lt;/h2&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   &lt;p class=&quot;text-gray-600&quot;&gt;Viale della Repubblica,
+289, Prato. Situato a soli 500m dallo svincolo &lt;strong&gt;Prato
+Est (A11)&lt;/strong&gt;.&lt;/p&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+&lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+&lt;div class=&quot;space-y-4 bg-white p-6 rounded-2xl border
+border-gray-200 shadow-sm&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   &lt;h3 class=&quot;text-hotel-gold font-bold uppercase text-xs
+tracking-widest&quot;&gt;Distanze Principali&lt;/h3&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   &lt;div class=&quot;flex items-center justify-between border-b
+border-gray-100 pb-2 text-sm&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;span class=&quot;text-gray-500&quot;&gt;Stazione Centrale
+Prato&lt;/span&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;span class=&quot;font-bold text-hotel-blue&quot;&gt;3 km
+(10 min)&lt;/span&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   &lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   &lt;div class=&quot;flex items-center justify-between border-b
+border-gray-100 pb-2 text-sm&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;span class=&quot;text-gray-500&quot;&gt;Aeroporto Firenze
+(FLR)&lt;/span&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;span class=&quot;font-bold text-hotel-blue&quot;&gt;15 km
+(15-20 min)&lt;/span&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   &lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   &lt;div class=&quot;flex items-center justify-between border-b
+border-gray-100 pb-2 text-sm&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;span class=&quot;text-gray-500&quot;&gt;Firenze Centro /
+SMN&lt;/span&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;span class=&quot;font-bold text-hotel-blue&quot;&gt;18 km
+(25 min)&lt;/span&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   &lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   &lt;div class=&quot;flex items-center justify-between text-sm&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;span class=&quot;text-gray-500&quot;&gt;Aeroporto Pisa
+(PSA)&lt;/span&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;span class=&quot;font-bold text-hotel-blue&quot;&gt;75 km
+(50 min)&lt;/span&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   &lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+&lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+&lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                &lt;!--
+Sezione Cartina e Nuova Foto --&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                &lt;div
+class=&quot;lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+&lt;div class=&quot;map-container rounded-3xl p-6 h-[400px] flex
+items-center justify-center shadow-lg relative border border-gray-200
+overflow-hidden&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   &lt;svg class=&quot;w-full h-full&quot; viewBox=&quot;0 0 400 300&quot;
+fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;line class=&quot;distance-line&quot; x1=&quot;200&quot;
+y1=&quot;150&quot; x2=&quot;160&quot; y2=&quot;100&quot; /&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;line class=&quot;distance-line&quot; x1=&quot;200&quot;
+y1=&quot;150&quot; x2=&quot;320&quot; y2=&quot;200&quot; /&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;line class=&quot;distance-line&quot; x1=&quot;200&quot;
+y1=&quot;150&quot; x2=&quot;350&quot; y2=&quot;250&quot; /&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;line class=&quot;distance-line&quot; x1=&quot;200&quot;
+y1=&quot;150&quot; x2=&quot;50&quot; y2=&quot;200&quot; /&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;g class=&quot;location-dot&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+           &lt;circle cx=&quot;200&quot; cy=&quot;150&quot; r=&quot;10&quot;
+fill=&quot;#c5a059&quot; /&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+           &lt;circle cx=&quot;200&quot; cy=&quot;150&quot; r=&quot;20&quot;
+stroke=&quot;#c5a059&quot; stroke-opacity=&quot;0.2&quot;
+stroke-width=&quot;2&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+               &lt;animate attributeName=&quot;r&quot; from=&quot;10&quot;
+to=&quot;30&quot; dur=&quot;2s&quot; repeatCount=&quot;indefinite&quot;
+/&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+               &lt;animate attributeName=&quot;opacity&quot; from=&quot;1&quot;
+to=&quot;0&quot; dur=&quot;2s&quot; repeatCount=&quot;indefinite&quot;
+/&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+           &lt;/circle&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+           &lt;text x=&quot;215&quot; y=&quot;155&quot;
+fill=&quot;#1a2e44&quot; font-weight=&quot;bold&quot;
+font-size=&quot;12&quot;&gt;Art Hotel Museo&lt;/text&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;/g&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;g&gt;&lt;circle cx=&quot;160&quot; cy=&quot;100&quot;
+r=&quot;6&quot; fill=&quot;#1a2e44&quot; /&gt;&lt;text x=&quot;110&quot;
+y=&quot;90&quot; fill=&quot;#4a5568&quot; font-size=&quot;10&quot;&gt;Staz.
+Prato Centrale&lt;/text&gt;&lt;/g&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;g&gt;&lt;circle cx=&quot;320&quot; cy=&quot;200&quot;
+r=&quot;6&quot; fill=&quot;#1a2e44&quot; /&gt;&lt;text x=&quot;330&quot;
+y=&quot;200&quot; fill=&quot;#4a5568&quot; font-size=&quot;10&quot;&gt;Aeroporto
+Firenze&lt;/text&gt;&lt;/g&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;g&gt;&lt;circle cx=&quot;350&quot; cy=&quot;250&quot;
+r=&quot;6&quot; fill=&quot;#1a2e44&quot; /&gt;&lt;text x=&quot;270&quot;
+y=&quot;270&quot; fill=&quot;#4a5568&quot; font-size=&quot;10&quot;&gt;Firenze
+SMN&lt;/text&gt;&lt;/g&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;g&gt;&lt;circle cx=&quot;50&quot; cy=&quot;200&quot; r=&quot;6&quot;
+fill=&quot;#1a2e44&quot; /&gt;&lt;text x=&quot;20&quot; y=&quot;220&quot;
+fill=&quot;#4a5568&quot; font-size=&quot;10&quot;&gt;Aeroporto
+Pisa&lt;/text&gt;&lt;/g&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;rect x=&quot;120&quot; y=&quot;140&quot; width=&quot;160&quot;
+height=&quot;20&quot; rx=&quot;4&quot; fill=&quot;#1a2e44&quot;
+fill-opacity=&quot;0.05&quot; /&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;text x=&quot;145&quot; y=&quot;154&quot; fill=&quot;#1a2e44&quot;
+font-size=&quot;8&quot; font-weight=&quot;bold&quot;
+opacity=&quot;0.4&quot;&gt;AUTOSTRADA A11&lt;/text&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   &lt;/svg&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   &lt;div class=&quot;absolute bottom-4 left-6 text-[9px]
+text-gray-400 font-mono italic&quot;&gt;* Mappa concettuale&lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+&lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+&lt;div class=&quot;rounded-3xl shadow-lg border border-gray-200
+overflow-hidden h-[400px]&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   &lt;img
+src=&quot;https://www.arthotel-museo.it/wp-content/uploads/sites/3/2023/03/art-hotel-museo-meeting1.jpg&quot;
+alt=&quot;Sala Congressi Art Hotel Museo&quot; class=&quot;w-full
+h-full object-cover&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+&lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+&lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            &lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        &lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">    &lt;/section&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">    &lt;!-- Footer
+--&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">    &lt;footer
+class=&quot;bg-gray-900 text-white py-16 px-6&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        &lt;div
+class=&quot;max-w-6xl mx-auto flex flex-col md:flex-row
+justify-between items-center gap-8&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            &lt;div
+class=&quot;text-center md:text-left&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                &lt;h3
+class=&quot;font-serif text-3xl italic mb-2&quot;&gt;Art Hotel
+Museo&lt;/h3&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                &lt;p
+class=&quot;text-gray-500 text-sm&quot;&gt;Viale della Repubblica,
+289 - 59100 Prato (PO)&lt;/p&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            &lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            &lt;div
+class=&quot;flex space-x-8 text-2xl&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                &lt;i
+class=&quot;fab fa-facebook hover:text-hotel-gold cursor-pointer
+transition&quot;&gt;&lt;/i&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                &lt;i
+class=&quot;fab fa-instagram hover:text-hotel-gold cursor-pointer
+transition&quot;&gt;&lt;/i&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                &lt;i
+class=&quot;fab fa-linkedin hover:text-hotel-gold cursor-pointer
+transition&quot;&gt;&lt;/i&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            &lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            &lt;div
+class=&quot;text-center md:text-right text-sm&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                &lt;p
+class=&quot;mb-1&quot;&gt;Tel: +39 0574 5787&lt;/p&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+&lt;p&gt;Email: info@arthotel-museo.it&lt;/p&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            &lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        &lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">    &lt;/footer&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">    &lt;script&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        const
+roomsData = [</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            {</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+name: &quot;Sala Picasso&quot;,</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+floor: &quot;Piano Terra (Modulabile)&quot;,</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                mq:
+180,</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+dims: &quot;18 x 11 m&quot;,</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+capacity: { platea: 200, ferro_cavallo: 40, banchi: 45, cocktail:
+250, cena: 150 },</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+features: [&quot;Videoproiettore a soffitto&quot;, &quot;Schermo
+motorizzato&quot;, &quot;Lavagna a fogli mobili&quot;, &quot;Microfonia
+wireless&quot;, &quot;Impianto amplificazione professionale&quot;,
+&quot;Desk reception dedicata&quot;, &quot;Guardaroba&quot;]</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            },</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            {</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+name: &quot;Sala De Chirico&quot;,</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+floor: &quot;Primo Piano&quot;,</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                mq:
+105,</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+dims: &quot;14 x 7.5 m&quot;,</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+capacity: { platea: 80, ferro_cavallo: 30, banchi: 35, cocktail: 100
+},</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+features: [&quot;Videoproiettore&quot;, &quot;Schermo&quot;, &quot;Wi-Fi
+High Speed&quot;, &quot;Impianto audio&quot;, &quot;Luce naturale&quot;]</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            },</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            {</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+name: &quot;Sala Cezanne&quot;,</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+floor: &quot;Primo Piano&quot;,</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                mq:
+42,</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+dims: &quot;8 x 6 m&quot;,</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+capacity: { platea: 35, ferro_cavallo: 20, banchi: 18 },</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+features: [&quot;Luce naturale&quot;, &quot;Videoproiettore&quot;,
+&quot;Wi-Fi&quot;, &quot;Ideale per workshop&quot;]</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            },</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            {</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+name: &quot;Sala Dalì&quot;,</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+floor: &quot;Primo Piano&quot;,</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                mq:
+40,</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+dims: &quot;7 x 6 m&quot;,</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+capacity: { platea: 35, ferro_cavallo: 20, banchi: 18 },</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+features: [&quot;Set-up boardroom&quot;, &quot;Videoproiettore&quot;,
+&quot;Luce naturale&quot;, &quot;Wi-Fi gratuito&quot;]</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            },</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            {</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+name: &quot;Sale Monet, Chagall, Mirò, Van Gogh&quot;,</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+floor: &quot;Primo Piano&quot;,</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                mq:
+35,</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+dims: &quot;7 x 5 m&quot;,</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+capacity: { platea: 25, ferro_cavallo: 15, banchi: 16 },</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+features: [&quot;Sale per sottocommissioni&quot;, &quot;Schermo
+LED/Proiettore&quot;, &quot;Connessione Wi-Fi&quot;, &quot;Desk
+reception&quot;]</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            }</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        ];</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        const
+allMenus = {</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            coffee:
+[</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                {
+title: &quot;Menù Fellini&quot;, price: &quot;6,00&quot;, desc:
+&quot;Caffetteria, The e tisane, succhi, acqua minerale e biscotti da
+the.&quot; },</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                {
+title: &quot;Menù Spielberg&quot;, price: &quot;7,00&quot;, desc:
+&quot;Caffetteria, The e tisane, succhi, acqua minerale, pasticceria
+secca e lievitati.&quot; },</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                {
+title: &quot;Menù Rossellini&quot;, price: &quot;8,00&quot;, desc:
+&quot;Caffetteria, The e tisane, succhi, acqua minerale, pasticceria
+secca, lievitati e tramezzini.&quot; },</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                { 
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+title: &quot;Menù Salvatores&quot;, 
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+price: &quot;9,50&quot;, 
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+desc: &quot;Caffetteria, The e tisane, succhi, acqua minerale,
+pasticceria secca, lievitati, tramezzini, pizzette di sfoglia,
+yogurt, macedonia di frutta.&quot;,</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+image:
+&quot;https://www.arthotel-museo.it/wp-content/uploads/sites/3/2023/03/art-hotel-museo-ristorante-1-1024x1024.jpg&quot;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                }</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            ],</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            buffet:
+[</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                {
+title: &quot;Menù Pascoli&quot;, price: &quot;17,00&quot;, items:
+[&quot;Cestino di pane con schiacciata Toscana&quot;, &quot;Tagliere
+di salumi e formaggi con confetture&quot;, &quot;Caponatina di
+verdure&quot;, &quot;Piccoli Burritos&quot;, &quot;Pennette alla
+Sorrentina&quot;] },</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                {
+title: &quot;Menù Montale&quot;, price: &quot;17,00&quot;, items:
+[&quot;Angolo cruditè&quot;, &quot;Sformatino di carote con crema di
+Gorgonzola&quot;, &quot;Straccetti di pollo al curry con riso pilaf&quot;,
+&quot;Macedonia&quot;, &quot;Acqua e caffè&quot;] },</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                {
+title: &quot;Menù Leopardi&quot;, price: &quot;22,00&quot;, items:
+[&quot;Prosciutto, crescentine e stracchino&quot;, &quot;Bruschette
+fegatini e pomodoro&quot;, &quot;Insalata champignon, uvetta e
+Grana&quot;, &quot;Risotto zafferano e salsiccia&quot;, &quot;Fritto
+di verdure pastellate&quot;, &quot;Tranci di Pinsa Romana&quot;] },</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                {
+title: &quot;Menù D'Annunzio&quot;, price: &quot;22,00&quot;, items:
+[&quot;Quiche Lorraine&quot;, &quot;Calzoncini pomodoro e
+mozzarella&quot;, &quot;Carpaccio di manzo marinato&quot;, &quot;Pennette
+alla Fiaccheraia&quot;, &quot;Verdure al forno&quot;, &quot;Panna
+cotta&quot;] },</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                {
+title: &quot;Menù Ungaretti&quot;, price: &quot;26,00&quot;, items:
+[&quot;Strudel vegetariano&quot;, &quot;Fagottini di Bresaola&quot;,
+&quot;Insalata Sardegna (tonno, uovo, olive)&quot;, &quot;Crespelle
+alla Fiorentina&quot;, &quot;Straccetti di tacchino al pepe rosa&quot;,
+&quot;Profiterole&quot;] },</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                {
+title: &quot;Menù Quasimodo&quot;, price: &quot;26,00&quot;, items:
+[&quot;Mousse di prosciutto&quot;, &quot;Insalata russa&quot;,
+&quot;Sformato di spinaci e ricotta&quot;, &quot;Gnocchetti speck e
+noci&quot;, &quot;Scaloppina al limone&quot;, &quot;Torta della
+Nonna&quot;] }</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            ],</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            servite:
+[</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                {
+title: &quot;Buonarroti&quot;, price: &quot;20,00&quot;, items:
+[&quot;Prosciutto e crostini&quot;, &quot;Maccheroncetti melanzane e
+ricotta&quot;, &quot;Tiramisù di Prato&quot;, &quot;Acqua e caffè&quot;]
+},</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                {
+title: &quot;Da Vinci&quot;, price: &quot;20,00&quot;, items:
+[&quot;Insalata Nizzarda&quot;, &quot;Cannelloni alla Fiorentina&quot;,
+&quot;Macedonia con Gelato&quot;, &quot;Acqua e caffè&quot;] },</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                {
+title: &quot;Caravaggio&quot;, price: &quot;20,00&quot;, items:
+[&quot;Carpaccio rucola e Grana&quot;, &quot;Risotto zucchine e
+Provola affumicata&quot;, &quot;Panna cotta&quot;, &quot;Acqua e
+caffè&quot;] },</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                {
+title: &quot;Botticelli&quot;, price: &quot;23,00&quot;, items:
+[&quot;Insalatina di champignon&quot;, &quot;Lasagnetta vegetariana&quot;,
+&quot;Bocconcini di coniglio al vin Santo&quot;, &quot;Patate Soutè&quot;,
+&quot;Acqua e caffè&quot;] },</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                {
+title: &quot;Cimabue&quot;, price: &quot;23,00&quot;, items:
+[&quot;Linguine cozze e pomodorini&quot;, &quot;Calamari gratinati
+rughetta e ciliegini&quot;, &quot;Sgroppino al limone&quot;, &quot;Acqua
+e caffè&quot;] },</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                {
+title: &quot;Canaletto&quot;, price: &quot;23,00&quot;, items:
+[&quot;Gnocchetti Roquefort e pistacchio&quot;, &quot;Tagliata di
+pollo&quot;, &quot;Misticanza e Grana&quot;, &quot;Panna cotta alla
+Fragola&quot;] },</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                {
+title: &quot;Vasari&quot;, price: &quot;25,00&quot;, items: [&quot;Risotto
+crema di Prosecco&quot;, &quot;Rollè di Vitella alla Vernaccia&quot;,
+&quot;Patate al forno&quot;, &quot;Mousse Mascarpone e frutti di
+bosco&quot;] },</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                {
+title: &quot;Matisse&quot;, price: &quot;25,00&quot;, items:
+[&quot;Lasagne alla Norcina&quot;, &quot;Gran Pezzo al sale&quot;,
+&quot;Spinaci al burro&quot;, &quot;Profiterole&quot;, &quot;Acqua e
+caffè&quot;] },</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                {
+title: &quot;Munch&quot;, price: &quot;25,00&quot;, items:
+[&quot;Garganelli broccoletti e acciughe&quot;, &quot;Salmone al pepe
+rosa&quot;, &quot;Patate prezzemolate&quot;, &quot;Macedonia di
+frutta&quot;] }</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            ],</p>
+<p style="margin-bottom: 0cm; line-height: 100%">           
+apericene: [</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                {
+title: &quot;Menù Proust&quot;, price: &quot;15,00&quot;, items:
+[&quot;Spritz, Prosecco &amp; Cold drinks&quot;, &quot;Schiacciata al
+sale grosso&quot;, &quot;Pizzette e Quiches prosciutto/taleggio&quot;,
+&quot;Mozzarelline in carrozza&quot;, &quot;Bicchierini di pappa al
+pomodoro&quot;] },</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                {
+title: &quot;Menù Dumas&quot;, price: &quot;18,00&quot;, items:
+[&quot;Spritz &amp; Prosecco&quot;, &quot;Tramezzini assortiti&quot;,
+&quot;Polpettine di manzo alla paprika dolce&quot;, &quot;Pizzette e
+Quiches&quot;, &quot;Pappa al pomodoro&quot;] },</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                {
+title: &quot;Menù Dickens&quot;, price: &quot;20,00&quot;, items:
+[&quot;Tagliere salumi Toscani&quot;, &quot;Sfogliatine pomodoro e
+Bufala&quot;, &quot;Bicchierini di verdure con tzatziky&quot;,
+&quot;Bruschette calde&quot;, &quot;Manzo marinato con carciofini&quot;]
+},</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                {
+title: &quot;Menù Cechov&quot;, price: &quot;25,00&quot;, items:
+[&quot;Pinsa Romana&quot;, &quot;Spiedini mozzarelline e ciliegini&quot;,
+&quot;Prosciutto Crudo di Parma&quot;, &quot;Fagottini bresaola e
+caprino&quot;, &quot;Insalata di mare&quot;, &quot;Macedonia o mini
+dessert&quot;] }</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            ],</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            welcome:
+[</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                {
+title: &quot;Menù Giotto&quot;, price: &quot;9,00&quot;, desc:
+&quot;Prosecco, Succhi, Cold drinks, Salatini da bar.&quot; },</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                {
+title: &quot;Menù Dalì&quot;, price: &quot;11,00&quot;, desc:
+&quot;Prosecco, Succhi, Cold drinks, Salatini da bar, Olive, Salatini
+di sfoglia assortiti, Pizzette.&quot; }</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            ]</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        };</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        function
+renderRooms() {</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            const
+container = document.getElementById('rooms-list');</p>
+<p style="margin-bottom: 0cm; line-height: 100%">           
+roomsData.forEach((room, idx) =&gt; {</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+const card = document.createElement('div');</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+card.className = `room-card p-6 cursor-pointer flex justify-between
+items-center rounded-lg shadow-sm border border-gray-100`;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+card.innerHTML = `</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+&lt;div class=&quot;flex items-center space-x-6&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   &lt;span class=&quot;text-hotel-gold font-bold text-xl
+italic&quot;&gt;0${idx + 1}&lt;/span&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   &lt;div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;h3 class=&quot;font-bold text-hotel-blue
+text-xl&quot;&gt;${room.name}&lt;/h3&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;p class=&quot;text-[10px] text-gray-400 uppercase
+tracking-widest font-semibold&quot;&gt;${room.floor}&lt;/p&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   &lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+&lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+&lt;div class=&quot;flex items-center space-x-4&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   &lt;span class=&quot;hidden sm:inline-block text-[10px] font-bold
+bg-white text-gray-600 px-3 py-1 rounded-full uppercase border
+border-gray-100&quot;&gt;Dettagli&lt;/span&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   &lt;i class=&quot;fas fa-chevron-down text-hotel-gold
+transition-transform duration-300&quot;&gt;&lt;/i&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+&lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                `;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+const panel = document.createElement('div');</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+panel.className = 'details-panel px-6';</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+panel.innerHTML = `</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+&lt;div class=&quot;bg-white/80 p-8 rounded-xl grid md:grid-cols-3
+gap-8 shadow-inner border border-gray-100&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   &lt;div class=&quot;space-y-4&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;h4 class=&quot;font-bold text-hotel-blue uppercase text-xs
+tracking-widest border-b border-hotel-gold pb-2 italic&quot;&gt;Scheda&lt;/h4&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;div class=&quot;grid grid-cols-1 gap-2 text-sm&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+           &lt;div class=&quot;flex justify-between
+text-gray-600&quot;&gt;&lt;span&gt;Superficie:&lt;/span&gt; &lt;span
+class=&quot;font-bold text-hotel-blue&quot;&gt;${room.mq}
+mq&lt;/span&gt;&lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+           &lt;div class=&quot;flex justify-between
+text-gray-600&quot;&gt;&lt;span&gt;Dimensioni:&lt;/span&gt; &lt;span
+class=&quot;font-bold text-hotel-blue&quot;&gt;${room.dims}&lt;/span&gt;&lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   &lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   &lt;div class=&quot;space-y-4&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;h4 class=&quot;font-bold text-hotel-blue uppercase text-xs
+tracking-widest border-b border-hotel-gold pb-2 italic&quot;&gt;Capacità&lt;/h4&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;div class=&quot;grid grid-cols-1 gap-2 text-sm&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+           ${room.capacity.platea ? `&lt;div class=&quot;flex
+justify-between text-gray-600&quot;&gt;&lt;span&gt;Platea:&lt;/span&gt;
+&lt;span class=&quot;font-bold
+text-hotel-blue&quot;&gt;${room.capacity.platea}&lt;/span&gt;&lt;/div&gt;`
+: ''}</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+           ${room.capacity.cocktail ? `&lt;div class=&quot;flex
+justify-between text-gray-600&quot;&gt;&lt;span&gt;Cocktail:&lt;/span&gt;
+&lt;span class=&quot;font-bold
+text-hotel-blue&quot;&gt;${room.capacity.cocktail}&lt;/span&gt;&lt;/div&gt;`
+: ''}</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   &lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   &lt;div class=&quot;space-y-4&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;h4 class=&quot;font-bold text-hotel-blue uppercase text-xs
+tracking-widest border-b border-hotel-gold pb-2
+italic&quot;&gt;Dotazioni&lt;/h4&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;ul class=&quot;text-[11px] space-y-1 text-gray-600
+italic&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+           ${room.features.slice(0, 5).map(f =&gt; `&lt;li&gt;&lt;i
+class=&quot;fas fa-check text-hotel-gold mr-2&quot;&gt;&lt;/i&gt;
+${f}&lt;/li&gt;`).join('')}</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;/ul&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   &lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+&lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                `;</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+card.onclick = () =&gt; {</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+const isActive = card.classList.contains('active');</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+document.querySelectorAll('.room-card').forEach(c =&gt; {</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   c.classList.remove('active');</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   c.querySelector('.fa-chevron-down').style.transform =
+'rotate(0deg)';</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   c.style.backgroundColor = &quot;#fff&quot;;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+});</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+if(!isActive) {</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   card.classList.add('active');</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   card.querySelector('.fa-chevron-down').style.transform =
+'rotate(180deg)';</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   card.style.backgroundColor = &quot;var(--hotel-beige)&quot;;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+}</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                };</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+container.appendChild(card);</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+container.appendChild(panel);</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            });</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        }</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        function
+filterMenu(category) {</p>
+<p style="margin-bottom: 0cm; line-height: 100%">           
+document.querySelectorAll('.tab-btn').forEach(btn =&gt;
+btn.classList.remove('active'));</p>
+<p style="margin-bottom: 0cm; line-height: 100%">           
+document.getElementById('btn-' + category).classList.add('active');</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            const
+container = document.getElementById('menu-container');</p>
+<p style="margin-bottom: 0cm; line-height: 100%">           
+container.innerHTML = ''; 
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            const
+menus = allMenus[category];</p>
+<p style="margin-bottom: 0cm; line-height: 100%">           
+if(menus) {</p>
+<p style="margin-bottom: 0cm; line-height: 100%">               
+menus.forEach(m =&gt; {</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+const card = document.createElement('div');</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+const isSalvatores = m.title === &quot;Menù Salvatores&quot;;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+card.className = `menu-card rounded-xl shadow-sm border
+border-gray-100 overflow-hidden ${isSalvatores ? 'salvatores-special'
+: ''}`;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+let content = '';</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+if (isSalvatores) {</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   content = `</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;div class=&quot;flex flex-col md:flex-row h-full&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+           &lt;div class=&quot;flex-grow p-6 flex flex-col&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+               &lt;div class=&quot;flex-grow&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+                   &lt;h4 class=&quot;font-bold text-hotel-blue
+text-lg mb-3 border-b border-hotel-beige pb-2 uppercase
+tracking-tight italic&quot;&gt;${m.title}&lt;/h4&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+                   &lt;p class=&quot;text-sm text-gray-500 italic
+leading-relaxed mb-4&quot;&gt;${m.desc}&lt;/p&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+               &lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+               &lt;div class=&quot;mt-auto pt-4 border-t
+border-hotel-beige flex justify-between items-center&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+                   &lt;span class=&quot;text-[10px] text-gray-400
+uppercase font-bold tracking-tighter&quot;&gt;Prezzo p.p.&lt;/span&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+                   &lt;span class=&quot;text-hotel-gold font-bold
+text-xl&quot;&gt;€ ${m.price}&lt;/span&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+               &lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+           &lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+           &lt;div class=&quot;w-full md:w-1/2 lg:w-2/5 h-48
+md:h-full shrink-0&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+               &lt;img src=&quot;${m.image}&quot; alt=&quot;Ristorante
+Art Hotel Museo&quot; class=&quot;w-full h-full object-cover&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+           &lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   `;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+} else {</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   content = `</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;div class=&quot;p-6 flex flex-col h-full&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+           &lt;div class=&quot;flex-grow&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+               &lt;h4 class=&quot;font-bold text-hotel-blue text-lg
+mb-3 border-b border-hotel-beige pb-2 uppercase tracking-tight
+italic&quot;&gt;${m.title}&lt;/h4&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+               ${m.desc ? `&lt;p class=&quot;text-sm text-gray-500
+italic leading-relaxed mb-4&quot;&gt;${m.desc}&lt;/p&gt;` : ''}</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+               ${m.items ? `&lt;ul class=&quot;text-[11px] space-y-2
+text-gray-600 mb-6 italic&quot;&gt;${m.items.map(i =&gt; `&lt;li&gt;&lt;span
+class=&quot;text-hotel-gold mr-2&quot;&gt;+&lt;/span&gt;${i}&lt;/li&gt;`).join('')}&lt;/ul&gt;`
+: ''}</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+           &lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+           &lt;div class=&quot;mt-auto pt-4 border-t
+border-hotel-beige flex justify-between items-center&quot;&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+               &lt;span class=&quot;text-[10px] text-gray-400
+uppercase font-bold tracking-tighter&quot;&gt;Prezzo p.p.&lt;/span&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+               &lt;span class=&quot;text-hotel-gold font-bold
+text-xl&quot;&gt;€ ${m.price}&lt;/span&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+           &lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+       &lt;/div&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+   `;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+}</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                    
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+card.innerHTML = content;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                   
+container.appendChild(card);</p>
+<p style="margin-bottom: 0cm; line-height: 100%">                });</p>
+<p style="margin-bottom: 0cm; line-height: 100%">            }</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        }</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">       
+window.onload = () =&gt; {</p>
+<p style="margin-bottom: 0cm; line-height: 100%">           
+renderRooms();</p>
+<p style="margin-bottom: 0cm; line-height: 100%">           
+filterMenu('coffee'); 
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">        };</p>
+<p style="margin-bottom: 0cm; line-height: 100%">    &lt;/script&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">&lt;/body&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%">&lt;/html&gt;</p>
+</body>
+</html>
