@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Hotel Museo - Centro Congressi Prato</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+        
+        :root {
+            --hotel-blue: #1a2e44;
+            --hotel-gold: #c5a059;
+            --hotel-beige: #f5f1ea; 
+            --hotel-gray-light: #f1f3f5; 
+        }
+
+        body { font-family: 'Montserrat', sans-serif; background-color: #fff; color: #333; scroll-behavior: smooth; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        
+        .room-card { transition: all 0.3s ease; border-left: 4px solid transparent; background-color: #fff; }
+        .room-card:hover { transform: translateX(5px); border-left-color: var(--hotel-gold); }
+        .room-card.active { border-left-color: var(--hotel-gold); }
+        
+        .details-panel { 
+            max-height: 0; 
+            overflow: hidden; 
+            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
+        }
+        .room-card.active + .details-panel { max-height: 1000px; padding-bottom: 2rem; }
+
+        .tab-btn { transition: all 0.2s; border: 1px solid var(--hotel-blue); color: var(--hotel-blue); }
+        .tab-btn.active { background-color: var(--hotel-blue); color: white; }
+
+        .menu-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            transition: transform 0.2s;
+            background-color: #fff;
+        }
+        .menu-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(26, 46, 68, 0.6), rgba(26, 46, 68, 0.2));
+        }
+
+        .map-container {
+            background: radial-gradient(circle at center, #ffffff 0%, #e9ecef 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .distance-line {
+            stroke: var(--hotel-gold);
+            stroke-width: 2;
+            stroke-dasharray: 5;
+            opacity: 0.6;
+        }
+        
+        .section-beige { background-color: var(--hotel-beige); }
+        .section-gray { background-color: var(--hotel-gray-light); }
+        
+        .salvatores-special {
+            grid-column: span 1;
+        }
+        @media (min-width: 1024px) {
+            .salvatores-special {
+                grid-column: span 2;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Hero -->
+    <header class="relative h-[65vh] flex items-center justify-center text-white overflow-hidden">
+        <div class="absolute inset-0 hero-gradient z-10"></div>
+        <img src="https://www.arthotel-museo.it/wp-content/uploads/sites/3/2023/03/art-hotel-museo-prato-meeting-1024x682.jpg" alt="Sala Meeting Art Hotel Museo" class="absolute inset-0 w-full h-full object-cover">
+        <div class="relative z-20 text-center px-4 max-w-4xl">
+            <h1 class="text-5xl md:text-7xl font-serif font-bold mb-4 italic">Art Hotel Museo</h1>
+            <p class="text-xl md:text-2xl font-light mb-8 uppercase tracking-[0.3em] text-hotel-gold">Centro Congressi Prato</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#sale" class="bg-hotel-gold text-white px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition shadow-lg">Le Sale Meeting</a>
+                <a href="#ristorazione" class="bg-white text-black px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg">Ristorazione</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Welcome Section (BEIGE) -->
+    <section class="py-20 section-beige border-b border-black/5">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-hotel-blue mb-6 italic">La Cornice Ideale per i Vostri Eventi</h2>
+            <p class="text-gray-700 leading-relaxed italic text-lg">
+                Struttura 4 stelle dove il design contemporaneo incontra l'efficienza funzionale. 
+                Situato di fronte al Centro Pecci, l'Art Hotel Museo dispone di 8 sale meeting modulabili, 106 camere e un prestigioso ristorante interno.
+            </p>
+        </div>
+    </section>
+
+    <!-- SALE MEETING (GRIGIO CHIARO) -->
+    <section id="sale" class="py-20 section-gray">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-hotel-gold font-bold tracking-widest uppercase text-sm">Professionalità & Spazio</span>
+                <h2 class="text-4xl font-serif font-bold text-hotel-blue mt-2">Le Sale Congressi</h2>
+                <p class="text-gray-500 mt-4 italic">Clicca sul nome della sala per scoprire dettagli, capacità e allestimenti.</p>
+            </div>
+            
+            <div id="rooms-list" class="space-y-4">
+                <!-- Injected by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- RISTORAZIONE (BEIGE) -->
+    <section id="ristorazione" class="py-20 section-beige">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-hotel-gold font-bold tracking-widest uppercase text-sm">Operà Arte & Restaurant</span>
+                <h2 class="text-4xl font-serif font-bold text-hotel-blue mt-2 mb-8">Proposte Gastronomiche</h2>
+                
+                <div class="flex flex-wrap justify-center gap-3 mb-12">
+                    <button onclick="filterMenu('coffee')" id="btn-coffee" class="tab-btn active px-6 py-2 rounded-full text-sm font-semibold">Coffee Break</button>
+                    <button onclick="filterMenu('buffet')" id="btn-buffet" class="tab-btn px-6 py-2 rounded-full text-sm font-semibold">Business Buffet</button>
+                    <button onclick="filterMenu('servite')" id="btn-servite" class="tab-btn px-6 py-2 rounded-full text-sm font-semibold">Pranzi Serviti</button>
+                    <button onclick="filterMenu('apericene')" id="btn-apericene" class="tab-btn px-6 py-2 rounded-full text-sm font-semibold">Apericene</button>
+                    <button onclick="filterMenu('welcome')" id="btn-welcome" class="tab-btn px-6 py-2 rounded-full text-sm font-semibold">Welcome Drink</button>
+                </div>
+            </div>
+
+            <div id="menu-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 min-h-[400px]">
+                <!-- Contenuto generato da JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- POSIZIONE & CARTINA (GRIGIO) -->
+    <section class="py-20 section-gray border-t border-black/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-12 items-stretch">
+                
+                <div class="lg:col-span-4 space-y-8">
+                    <div>
+                        <h2 class="text-4xl font-serif font-bold italic mb-4 text-hotel-blue">📍 Posizione Strategica</h2>
+                        <p class="text-gray-600">Viale della Repubblica, 289, Prato. Situato a soli 500m dallo svincolo <strong>Prato Est (A11)</strong>.</p>
+                    </div>
+
+                    <div class="space-y-4 bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
+                        <h3 class="text-hotel-gold font-bold uppercase text-xs tracking-widest">Distanze Principali</h3>
+                        <div class="flex items-center justify-between border-b border-gray-100 pb-2 text-sm">
+                            <span class="text-gray-500">Stazione Centrale Prato</span>
+                            <span class="font-bold text-hotel-blue">3 km (10 min)</span>
+                        </div>
+                        <div class="flex items-center justify-between border-b border-gray-100 pb-2 text-sm">
+                            <span class="text-gray-500">Aeroporto Firenze (FLR)</span>
+                            <span class="font-bold text-hotel-blue">15 km (15-20 min)</span>
+                        </div>
+                        <div class="flex items-center justify-between border-b border-gray-100 pb-2 text-sm">
+                            <span class="text-gray-500">Firenze Centro / SMN</span>
+                            <span class="font-bold text-hotel-blue">18 km (25 min)</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-500">Aeroporto Pisa (PSA)</span>
+                            <span class="font-bold text-hotel-blue">75 km (50 min)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sezione Cartina e Nuova Foto -->
+                <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="map-container rounded-3xl p-6 h-[400px] flex items-center justify-center shadow-lg relative border border-gray-200 overflow-hidden">
+                        <svg class="w-full h-full" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line class="distance-line" x1="200" y1="150" x2="160" y2="100" />
+                            <line class="distance-line" x1="200" y1="150" x2="320" y2="200" />
+                            <line class="distance-line" x1="200" y1="150" x2="350" y2="250" />
+                            <line class="distance-line" x1="200" y1="150" x2="50" y2="200" />
+
+                            <g class="location-dot">
+                                <circle cx="200" cy="150" r="10" fill="#c5a059" />
+                                <circle cx="200" cy="150" r="20" stroke="#c5a059" stroke-opacity="0.2" stroke-width="2">
+                                    <animate attributeName="r" from="10" to="30" dur="2s" repeatCount="indefinite" />
+                                    <animate attributeName="opacity" from="1" to="0" dur="2s" repeatCount="indefinite" />
+                                </circle>
+                                <text x="215" y="155" fill="#1a2e44" font-weight="bold" font-size="12">Art Hotel Museo</text>
+                            </g>
+                            <g><circle cx="160" cy="100" r="6" fill="#1a2e44" /><text x="110" y="90" fill="#4a5568" font-size="10">Staz. Prato Centrale</text></g>
+                            <g><circle cx="320" cy="200" r="6" fill="#1a2e44" /><text x="330" y="200" fill="#4a5568" font-size="10">Aeroporto Firenze</text></g>
+                            <g><circle cx="350" cy="250" r="6" fill="#1a2e44" /><text x="270" y="270" fill="#4a5568" font-size="10">Firenze SMN</text></g>
+                            <g><circle cx="50" cy="200" r="6" fill="#1a2e44" /><text x="20" y="220" fill="#4a5568" font-size="10">Aeroporto Pisa</text></g>
+                            <rect x="120" y="140" width="160" height="20" rx="4" fill="#1a2e44" fill-opacity="0.05" />
+                            <text x="145" y="154" fill="#1a2e44" font-size="8" font-weight="bold" opacity="0.4">AUTOSTRADA A11</text>
+                        </svg>
+                        <div class="absolute bottom-4 left-6 text-[9px] text-gray-400 font-mono italic">* Mappa concettuale</div>
+                    </div>
+
+                    <div class="rounded-3xl shadow-lg border border-gray-200 overflow-hidden h-[400px]">
+                        <img src="https://www.arthotel-museo.it/wp-content/uploads/sites/3/2023/03/art-hotel-museo-meeting1.jpg" alt="Sala Congressi Art Hotel Museo" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-center md:text-left">
+                <h3 class="font-serif text-3xl italic mb-2">Art Hotel Museo</h3>
+                <p class="text-gray-500 text-sm">Viale della Repubblica, 289 - 59100 Prato (PO)</p>
+            </div>
+            <div class="flex space-x-8 text-2xl">
+                <i class="fab fa-facebook hover:text-hotel-gold cursor-pointer transition"></i>
+                <i class="fab fa-instagram hover:text-hotel-gold cursor-pointer transition"></i>
+                <i class="fab fa-linkedin hover:text-hotel-gold cursor-pointer transition"></i>
+            </div>
+            <div class="text-center md:text-right text-sm">
+                <p class="mb-1">Tel: +39 0574 5787</p>
+                <p>Email: info@arthotel-museo.it</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const roomsData = [
+            {
+                name: "Sala Picasso",
+                floor: "Piano Terra (Modulabile)",
+                mq: 180,
+                dims: "18 x 11 m",
+                capacity: { platea: 200, ferro_cavallo: 40, banchi: 45, cocktail: 250, cena: 150 },
+                features: ["Videoproiettore a soffitto", "Schermo motorizzato", "Lavagna a fogli mobili", "Microfonia wireless", "Impianto amplificazione professionale", "Desk reception dedicata", "Guardaroba"]
+            },
+            {
+                name: "Sala De Chirico",
+                floor: "Primo Piano",
+                mq: 105,
+                dims: "14 x 7.5 m",
+                capacity: { platea: 80, ferro_cavallo: 30, banchi: 35, cocktail: 100 },
+                features: ["Videoproiettore", "Schermo", "Wi-Fi High Speed", "Impianto audio", "Luce naturale"]
+            },
+            {
+                name: "Sala Cezanne",
+                floor: "Primo Piano",
+                mq: 42,
+                dims: "8 x 6 m",
+                capacity: { platea: 35, ferro_cavallo: 20, banchi: 18 },
+                features: ["Luce naturale", "Videoproiettore", "Wi-Fi", "Ideale per workshop"]
+            },
+            {
+                name: "Sala Dalì",
+                floor: "Primo Piano",
+                mq: 40,
+                dims: "7 x 6 m",
+                capacity: { platea: 35, ferro_cavallo: 20, banchi: 18 },
+                features: ["Set-up boardroom", "Videoproiettore", "Luce naturale", "Wi-Fi gratuito"]
+            },
+            {
+                name: "Sale Monet, Chagall, Mirò, Van Gogh",
+                floor: "Primo Piano",
+                mq: 35,
+                dims: "7 x 5 m",
+                capacity: { platea: 25, ferro_cavallo: 15, banchi: 16 },
+                features: ["Sale per sottocommissioni", "Schermo LED/Proiettore", "Connessione Wi-Fi", "Desk reception"]
+            }
+        ];
+
+        const allMenus = {
+            coffee: [
+                { title: "Menù Fellini", price: "6,00", desc: "Caffetteria, The e tisane, succhi, acqua minerale e biscotti da the." },
+                { title: "Menù Spielberg", price: "7,00", desc: "Caffetteria, The e tisane, succhi, acqua minerale, pasticceria secca e lievitati." },
+                { title: "Menù Rossellini", price: "8,00", desc: "Caffetteria, The e tisane, succhi, acqua minerale, pasticceria secca, lievitati e tramezzini." },
+                { 
+                    title: "Menù Salvatores", 
+                    price: "9,50", 
+                    desc: "Caffetteria, The e tisane, succhi, acqua minerale, pasticceria secca, lievitati, tramezzini, pizzette di sfoglia, yogurt, macedonia di frutta.",
+                    image: "https://www.arthotel-museo.it/wp-content/uploads/sites/3/2023/03/art-hotel-museo-ristorante-1-1024x1024.jpg"
+                }
+            ],
+            buffet: [
+                { title: "Menù Pascoli", price: "17,00", items: ["Cestino di pane con schiacciata Toscana", "Tagliere di salumi e formaggi con confetture", "Caponatina di verdure", "Piccoli Burritos", "Pennette alla Sorrentina"] },
+                { title: "Menù Montale", price: "17,00", items: ["Angolo cruditè", "Sformatino di carote con crema di Gorgonzola", "Straccetti di pollo al curry con riso pilaf", "Macedonia", "Acqua e caffè"] },
+                { title: "Menù Leopardi", price: "22,00", items: ["Prosciutto, crescentine e stracchino", "Bruschette fegatini e pomodoro", "Insalata champignon, uvetta e Grana", "Risotto zafferano e salsiccia", "Fritto di verdure pastellate", "Tranci di Pinsa Romana"] },
+                { title: "Menù D'Annunzio", price: "22,00", items: ["Quiche Lorraine", "Calzoncini pomodoro e mozzarella", "Carpaccio di manzo marinato", "Pennette alla Fiaccheraia", "Verdure al forno", "Panna cotta"] },
+                { title: "Menù Ungaretti", price: "26,00", items: ["Strudel vegetariano", "Fagottini di Bresaola", "Insalata Sardegna (tonno, uovo, olive)", "Crespelle alla Fiorentina", "Straccetti di tacchino al pepe rosa", "Profiterole"] },
+                { title: "Menù Quasimodo", price: "26,00", items: ["Mousse di prosciutto", "Insalata russa", "Sformato di spinaci e ricotta", "Gnocchetti speck e noci", "Scaloppina al limone", "Torta della Nonna"] }
+            ],
+            servite: [
+                { title: "Buonarroti", price: "20,00", items: ["Prosciutto e crostini", "Maccheroncetti melanzane e ricotta", "Tiramisù di Prato", "Acqua e caffè"] },
+                { title: "Da Vinci", price: "20,00", items: ["Insalata Nizzarda", "Cannelloni alla Fiorentina", "Macedonia con Gelato", "Acqua e caffè"] },
+                { title: "Caravaggio", price: "20,00", items: ["Carpaccio rucola e Grana", "Risotto zucchine e Provola affumicata", "Panna cotta", "Acqua e caffè"] },
+                { title: "Botticelli", price: "23,00", items: ["Insalatina di champignon", "Lasagnetta vegetariana", "Bocconcini di coniglio al vin Santo", "Patate Soutè", "Acqua e caffè"] },
+                { title: "Cimabue", price: "23,00", items: ["Linguine cozze e pomodorini", "Calamari gratinati rughetta e ciliegini", "Sgroppino al limone", "Acqua e caffè"] },
+                { title: "Canaletto", price: "23,00", items: ["Gnocchetti Roquefort e pistacchio", "Tagliata di pollo", "Misticanza e Grana", "Panna cotta alla Fragola"] },
+                { title: "Vasari", price: "25,00", items: ["Risotto crema di Prosecco", "Rollè di Vitella alla Vernaccia", "Patate al forno", "Mousse Mascarpone e frutti di bosco"] },
+                { title: "Matisse", price: "25,00", items: ["Lasagne alla Norcina", "Gran Pezzo al sale", "Spinaci al burro", "Profiterole", "Acqua e caffè"] },
+                { title: "Munch", price: "25,00", items: ["Garganelli broccoletti e acciughe", "Salmone al pepe rosa", "Patate prezzemolate", "Macedonia di frutta"] }
+            ],
+            apericene: [
+                { title: "Menù Proust", price: "15,00", items: ["Spritz, Prosecco & Cold drinks", "Schiacciata al sale grosso", "Pizzette e Quiches prosciutto/taleggio", "Mozzarelline in carrozza", "Bicchierini di pappa al pomodoro"] },
+                { title: "Menù Dumas", price: "18,00", items: ["Spritz & Prosecco", "Tramezzini assortiti", "Polpettine di manzo alla paprika dolce", "Pizzette e Quiches", "Pappa al pomodoro"] },
+                { title: "Menù Dickens", price: "20,00", items: ["Tagliere salumi Toscani", "Sfogliatine pomodoro e Bufala", "Bicchierini di verdure con tzatziky", "Bruschette calde", "Manzo marinato con carciofini"] },
+                { title: "Menù Cechov", price: "25,00", items: ["Pinsa Romana", "Spiedini mozzarelline e ciliegini", "Prosciutto Crudo di Parma", "Fagottini bresaola e caprino", "Insalata di mare", "Macedonia o mini dessert"] }
+            ],
+            welcome: [
+                { title: "Menù Giotto", price: "9,00", desc: "Prosecco, Succhi, Cold drinks, Salatini da bar." },
+                { title: "Menù Dalì", price: "11,00", desc: "Prosecco, Succhi, Cold drinks, Salatini da bar, Olive, Salatini di sfoglia assortiti, Pizzette." }
+            ]
+        };
+
+        function renderRooms() {
+            const container = document.getElementById('rooms-list');
+            roomsData.forEach((room, idx) => {
+                const card = document.createElement('div');
+                card.className = `room-card p-6 cursor-pointer flex justify-between items-center rounded-lg shadow-sm border border-gray-100`;
+                card.innerHTML = `
+                    <div class="flex items-center space-x-6">
+                        <span class="text-hotel-gold font-bold text-xl italic">0${idx + 1}</span>
+                        <div>
+                            <h3 class="font-bold text-hotel-blue text-xl">${room.name}</h3>
+                            <p class="text-[10px] text-gray-400 uppercase tracking-widest font-semibold">${room.floor}</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <span class="hidden sm:inline-block text-[10px] font-bold bg-white text-gray-600 px-3 py-1 rounded-full uppercase border border-gray-100">Dettagli</span>
+                        <i class="fas fa-chevron-down text-hotel-gold transition-transform duration-300"></i>
+                    </div>
+                `;
+                
+                const panel = document.createElement('div');
+                panel.className = 'details-panel px-6';
+                panel.innerHTML = `
+                    <div class="bg-white/80 p-8 rounded-xl grid md:grid-cols-3 gap-8 shadow-inner border border-gray-100">
+                        <div class="space-y-4">
+                            <h4 class="font-bold text-hotel-blue uppercase text-xs tracking-widest border-b border-hotel-gold pb-2 italic">Scheda</h4>
+                            <div class="grid grid-cols-1 gap-2 text-sm">
+                                <div class="flex justify-between text-gray-600"><span>Superficie:</span> <span class="font-bold text-hotel-blue">${room.mq} mq</span></div>
+                                <div class="flex justify-between text-gray-600"><span>Dimensioni:</span> <span class="font-bold text-hotel-blue">${room.dims}</span></div>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <h4 class="font-bold text-hotel-blue uppercase text-xs tracking-widest border-b border-hotel-gold pb-2 italic">Capacità</h4>
+                            <div class="grid grid-cols-1 gap-2 text-sm">
+                                ${room.capacity.platea ? `<div class="flex justify-between text-gray-600"><span>Platea:</span> <span class="font-bold text-hotel-blue">${room.capacity.platea}</span></div>` : ''}
+                                ${room.capacity.cocktail ? `<div class="flex justify-between text-gray-600"><span>Cocktail:</span> <span class="font-bold text-hotel-blue">${room.capacity.cocktail}</span></div>` : ''}
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <h4 class="font-bold text-hotel-blue uppercase text-xs tracking-widest border-b border-hotel-gold pb-2 italic">Dotazioni</h4>
+                            <ul class="text-[11px] space-y-1 text-gray-600 italic">
+                                ${room.features.slice(0, 5).map(f => `<li><i class="fas fa-check text-hotel-gold mr-2"></i> ${f}</li>`).join('')}
+                            </ul>
+                        </div>
+                    </div>
+                `;
+
+                card.onclick = () => {
+                    const isActive = card.classList.contains('active');
+                    document.querySelectorAll('.room-card').forEach(c => {
+                        c.classList.remove('active');
+                        c.querySelector('.fa-chevron-down').style.transform = 'rotate(0deg)';
+                        c.style.backgroundColor = "#fff";
+                    });
+                    if(!isActive) {
+                        card.classList.add('active');
+                        card.querySelector('.fa-chevron-down').style.transform = 'rotate(180deg)';
+                        card.style.backgroundColor = "var(--hotel-beige)";
+                    }
+                };
+
+                container.appendChild(card);
+                container.appendChild(panel);
+            });
+        }
+
+        function filterMenu(category) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('btn-' + category).classList.add('active');
+
+            const container = document.getElementById('menu-container');
+            container.innerHTML = ''; 
+
+            const menus = allMenus[category];
+            if(menus) {
+                menus.forEach(m => {
+                    const card = document.createElement('div');
+                    const isSalvatores = m.title === "Menù Salvatores";
+                    
+                    card.className = `menu-card rounded-xl shadow-sm border border-gray-100 overflow-hidden ${isSalvatores ? 'salvatores-special' : ''}`;
+                    
+                    let content = '';
+                    if (isSalvatores) {
+                        content = `
+                            <div class="flex flex-col md:flex-row h-full">
+                                <div class="flex-grow p-6 flex flex-col">
+                                    <div class="flex-grow">
+                                        <h4 class="font-bold text-hotel-blue text-lg mb-3 border-b border-hotel-beige pb-2 uppercase tracking-tight italic">${m.title}</h4>
+                                        <p class="text-sm text-gray-500 italic leading-relaxed mb-4">${m.desc}</p>
+                                    </div>
+                                    <div class="mt-auto pt-4 border-t border-hotel-beige flex justify-between items-center">
+                                        <span class="text-[10px] text-gray-400 uppercase font-bold tracking-tighter">Prezzo p.p.</span>
+                                        <span class="text-hotel-gold font-bold text-xl">€ ${m.price}</span>
+                                    </div>
+                                </div>
+                                <div class="w-full md:w-1/2 lg:w-2/5 h-48 md:h-full shrink-0">
+                                    <img src="${m.image}" alt="Ristorante Art Hotel Museo" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                        `;
+                    } else {
+                        content = `
+                            <div class="p-6 flex flex-col h-full">
+                                <div class="flex-grow">
+                                    <h4 class="font-bold text-hotel-blue text-lg mb-3 border-b border-hotel-beige pb-2 uppercase tracking-tight italic">${m.title}</h4>
+                                    ${m.desc ? `<p class="text-sm text-gray-500 italic leading-relaxed mb-4">${m.desc}</p>` : ''}
+                                    ${m.items ? `<ul class="text-[11px] space-y-2 text-gray-600 mb-6 italic">${m.items.map(i => `<li><span class="text-hotel-gold mr-2">+</span>${i}</li>`).join('')}</ul>` : ''}
+                                </div>
+                                <div class="mt-auto pt-4 border-t border-hotel-beige flex justify-between items-center">
+                                    <span class="text-[10px] text-gray-400 uppercase font-bold tracking-tighter">Prezzo p.p.</span>
+                                    <span class="text-hotel-gold font-bold text-xl">€ ${m.price}</span>
+                                </div>
+                            </div>
+                        `;
+                    }
+                    
+                    card.innerHTML = content;
+                    container.appendChild(card);
+                });
+            }
+        }
+
+        window.onload = () => {
+            renderRooms();
+            filterMenu('coffee'); 
+        };
+    </script>
+</body>
+</html>
